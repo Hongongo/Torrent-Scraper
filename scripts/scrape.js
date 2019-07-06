@@ -8,9 +8,10 @@ var scrape = function(cb){
         $('tr div.detName').each(function (i, element) {
             var title = $(element).children().attr("title");
             var URL = $(element).children().attr("href");
+            var author;
 
             $("tr font.detDesc").each(function(i, element) {
-                extra = $(element).text().trim();
+                author = $(element).text().trim();
             });
 
             // Save these results in an object that we'll push into the results array we defined earlier

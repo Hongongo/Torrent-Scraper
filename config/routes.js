@@ -32,7 +32,6 @@ module.exports = function(router){
         }
         headlinesController.get(query, function (data) {
             res.json(data);
-            console.log(data);
         })
     }); // router.get('/api/headlines')
 
