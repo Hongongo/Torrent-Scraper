@@ -3,12 +3,45 @@
 <head>
     <title>Torrent Scraper</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/style/css/plugins.css" rel="stylesheet">
+    <link href="../../assets/style/css/prettify.css" rel="stylesheet">
+    <link href="../../assets/style/css/style.css" rel="stylesheet">
+    <link href="../../assets/style/css/color/aqua.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,700,600,500,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
+    <link href="../../assets/style/type/fontello.css" rel="stylesheet">
+    <link href="../../assets/style/type/budicons.css" rel="stylesheet">
 </head>
-<body>
+<body class="full-layout">
 
-{{{body}}}
+<div class="body-wrapper">
+    <header>
+        {{>header}}
+    </header>
 
+    {{>home}}
+
+    {{{body}}}
+
+    <footer>
+        {{>footer}}
+    </footer>
+
+</div>
+<!-- /.body-wrapper -->
+<script src="../../assets/style/js/jquery.min.js"></script>
+<script src="../../assets/style/js/bootstrap.min.js"></script>
+<script src="../../assets/style/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../assets/style/js/classie.js"></script>
+<script src="../../assets/style/js/plugins.js"></script>
+<script src="../../assets/style/js/scripts.js"></script>
+<script>
+    $.backstretch(["../../assets/style/images/art/bg4.jpg"]);
+</script>
 </body>
 </html>

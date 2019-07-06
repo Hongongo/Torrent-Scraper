@@ -2,7 +2,9 @@ var axios = require('axios');
 var cheerio = require('cheerio');
 
 var scrape = function(cb){
-    axios.get('https://thepiratebay3.org/index.php?q=evangelion').then(function(response){
+    // evangelion - https://thepiratebay3.org/index.php?q=evangelion
+    // ufc - https://thepiratebay3.org/index.php?q=ufc
+    axios.get('https://thepiratebay3.org/index.php?q=ufc').then(function(response){
         var $ = cheerio.load(response.data);
         var torrents = [];
         $('tr div.detName').each(function (i, element) {

@@ -12,9 +12,7 @@ var router = express.Router();
 require('./config/routes')(router);
 
 app.use(express.static(__dirname + '/public'));
-app.engine('handlebars', expressHandlebars({
-    defaultLayout: 'main'
-}));
+app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -27,7 +25,7 @@ mongoose.connect(db, function(error){
         console.log(error);
     } else
         console.log('mongoose connection is successful');
-});
+}); // moongoose.connect()
 
 app.listen(PORT, function(){
     console.log("Listening on port: " + PORT);
