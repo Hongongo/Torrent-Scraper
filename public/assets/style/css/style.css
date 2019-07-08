@@ -754,6 +754,8 @@ section.naked {
 .services-1 .row  .icon {
     float: left;
     margin-right: 20px;
+    height: 10px;
+    width: 10px;
 }
 .services-1 .row .text {
     overflow: hidden
