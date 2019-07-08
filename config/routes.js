@@ -5,9 +5,11 @@ var notesController = require('../controllers/notes');
 module.exports = function(router){
     router.get('/', function (req, res) {
         var query = {};
+        if (req.query.saved){
+            query = req.query;
+        }
         headlinesController.get(query, function (data) {
-            console.log(data);
-            res.render('home', {scrape: data})
+            res.render('home', {scrape:data});
         });
     }); //router.get('/');
 
@@ -30,8 +32,6 @@ module.exports = function(router){
     }) // router.get('/api/fetch');
 
     router.get('/api/headlines', function (req, res) {
-        console.log(req.query);
-        console.log(req);
         var query = {};
         if (req.query.saved){
             query = req.query;
@@ -78,5 +78,4 @@ module.exports = function(router){
             res.json(data);
         });
     }); // router.post('/api/notes')
-
 }; // module.exports

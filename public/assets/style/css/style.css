@@ -313,6 +313,7 @@ hr {
     border-width: 2px;
     border-radius: 0;
     background: none;
+    text-align: center;
 }
 .alert-success {
     border-color: #3c763d;

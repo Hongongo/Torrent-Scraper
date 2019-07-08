@@ -7,9 +7,13 @@ var headLineSchema = new Schema({
         required: true,
         unique: true
     },
-    link: {
+    author:{
         type: String,
         required: true
+    },
+    url: {
+        type: String,
+        required: 'Url is required'
     },
     saved: {
         type: Boolean,

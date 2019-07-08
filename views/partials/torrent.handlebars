@@ -1,12 +1,12 @@
-
-{{#each scrape}}
 <div class="col-md-4 col-sm-6" href="{{this.url}}">
     <div class="icon"> <a href="{{this.url}}"><img src="/../../assets/images/pb-logo-small.png" alt="" /> </a></div>
     <!-- /.icon -->
     <div class="text">
-        <p>{{title}}</p>
+        <p>{{this.title}}</p>
+    </div>
+    <div class="text">
+        <p>{{this.author}}</p>
     </div>
     <!-- /.text -->
 </div>
 <!-- /column -->
-{{/each}}
