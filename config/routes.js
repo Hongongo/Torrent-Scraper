@@ -15,11 +15,11 @@ module.exports = function(router){
         headlinesController.fetch(function (err, docs) {
             if (!docs || docs.insertedCount === 0){
                 res.json({
-                    message: 'No new articles today. Check back tomorrow'
+                    message: 'No new torrents today. Check back tomorrow'
                 });
             } else{
                 res.json({
-                    message: 'Added ' + docs.insertedCount + 'new articles!'
+                    message: 'Added ' + docs.insertedCount + 'new torrents!'
                 });
             }
         })
