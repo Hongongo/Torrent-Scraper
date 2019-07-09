@@ -2,13 +2,7 @@
     <section id="about">
         <div class="box">
             <div class="row">
-                <div class="col-md-5 col-md-push-7 col-sm-12">
-                    <div class="row">
-                        <div id="scrape-btn" class="alert alert-warning" > <a href="/api/fetch"><strong>S C R A P E !</strong></a></div>
-                    </div>
-                </div>
-                <!-- /column -->
-                <div class="col-md-7 col-md-pull-5 col-sm-12">
+                <div class="col-md-7 col-sm-12">
                     <p class="lead">Tired of visiting <a href="https://thepiratebay3.org/">thepiratebay.org</a> and watching all those annoying ads as you navigate? </p>
                     <p>With Torrent Scraper you can get the information you need to know before downloading a torrent and without directly visiting the main site and avoid the ugly ads that the site nests.</p>
                     <h2 class="section-title">How does it work?</h2>
@@ -16,19 +10,31 @@
                     <p>Fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla.</p>
                 </div>
                 <!-- /column -->
+
+                <div class="col-md-5 col-sm-12">
+                    <div id="btn-container" class="row">
+                        <a id="btn-scrape" class="btn">Scrape Torrents</a>
+                        <a href="btn-saved" class="btn btn-green">Saved Torrents</a>
+                        <a href="btn-delete" class="btn btn-red">Delete Torrents</a>
+                    </div>
+                </div>
+                <!-- /column -->
             </div>
             <!-- /.row -->
             <div class="clearfix"></div>
             <div class="divide40"></div>
-            <h2 class="section-title">Scraped Torrents</h2>
+            <h2 class="section-title-scraped">Scraped Torrents</h2>
             <div class="divide10"></div>
             <div class="services-1">
-                <div id="scraper-container" class="row">
+                <div id="scraped-container" class="row">
 
-                    {{#each scrape}}
-
-                        {{>torrent}}
-                    {{/each}}
+                    {{#if scrape}}
+                        {{#each scrape}}
+                            {{>torrent}}
+                        {{/each}}
+                        {{else}}
+                        {{>empty-item}}
+                    {{/if}}
 
                 </div>
                 <!-- /.row -->

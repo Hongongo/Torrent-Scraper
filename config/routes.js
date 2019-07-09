@@ -24,9 +24,10 @@ module.exports = function(router){
                     message: 'No new torrents today. Check back tomorrow'
                 });
             } else{
-                res.json({
+                res.render({message: 'Added ' + docs.insertedCount + 'new torrents!'},'/#scraped-container')
+                /*res.json({
                     message: 'Added ' + docs.insertedCount + 'new torrents!'
-                });
+                });*/
             }
         })
     }) // router.get('/api/fetch');

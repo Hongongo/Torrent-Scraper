@@ -1,0 +1,17 @@
+#btn-container div{
+    text-align: left;
+}
+
+#btn-container a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.section-title-scraped{
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+}
