@@ -11,6 +11,7 @@ module.exports = function(router){
         headlinesController.get(query, function (data) {
             res.render('home', {scrape:data});
         });
+        //res.render('home');
     }); //router.get('/');
 
     router.get('/saved', function (req, res) {
@@ -50,8 +51,11 @@ module.exports = function(router){
         });
     }); // router.delete('/api/headlines/:id')
 
-    router.patch('/api/headlines', function (req, res) {
-        headlinesController.update(req.body, function (err, data) {
+    router.patch('/api/headlines/', function (req, res) {
+        console.log(req.body.id);
+        headlinesController.update(req.body.id, function (err, data) {
+            console.log('update: \n');
+            console.log(data);
             res.json(data);
         });
     }) // router.patch('/api/headlines')

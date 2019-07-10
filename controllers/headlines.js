@@ -22,9 +22,9 @@ module.exports = {
             .sort({_id: -1})
             .exec(function(err, doc){ cb(doc);});
     }, // get
-    update: function (query, cb) {
-        HeadLine.update({_id: query._id}, {
-            $set: query
+    update: function (id, cb) {
+        HeadLine.updateOne({_id: id}, {
+            saved: true
         }, {}, cb)
     }
 }; // module.exports
