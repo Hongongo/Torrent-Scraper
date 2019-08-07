@@ -25,7 +25,7 @@ module.exports = function(router){
                     message: 'No new torrents today. Check back tomorrow'
                 });
             } else{
-                res.render({message: 'Added ' + docs.insertedCount + 'new torrents!'},'/#scraped-container')
+                res.render({message: 'Added ' + docs.insertedCount + 'new torrents!'},'#scraped-container')
                 /*res.json({
                     message: 'Added ' + docs.insertedCount + 'new torrents!'
                 });*/
